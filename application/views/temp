@@ -1,0 +1,1 @@
+<textarea class="form-control" id="myTextarea" name="Content" rows="5"><?php echo set_value('Content'); ?></textarea>
