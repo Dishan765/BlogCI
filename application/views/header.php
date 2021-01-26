@@ -57,7 +57,7 @@
           <li class="<?php if ($this->uri->uri_string() == 'userPost') {
                         echo 'active';
                       } ?> nav-item">
-            <a class="nav-link" href="<?php echo base_url().'userPost'; ?>">UserPost</a>
+            <a class="nav-link" href="<?php echo base_url().'userPost'; ?>">Your Posts</a>
           </li>
           
           <li class="<?php if ($this->uri->uri_string() == 'Logout') {

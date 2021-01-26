@@ -71,7 +71,7 @@ foreach ($controller_category as $v) {
 }
 
 $post_controller = "PostController";
-$controller_post = array("CreatePost","Delete", "Edit","userPost");
+$controller_post = array("CreatePost","Delete", "Edit","userPost", "SaveEdit");
 foreach ($controller_post as $v) {
   $route[$v] = "$post_controller/" . $v;
   $route[$v . "/(.*)"] = "$post_controller/" . $v . '/$1';

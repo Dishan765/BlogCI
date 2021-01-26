@@ -74,7 +74,7 @@ class HomeController extends CI_Controller
       $data = $this->PostModel->Login($this->input->post('Name'), $this->input->post('pwd'));
       
       if ($data == NULL) {   
-        var_dump($data);
+        //var_dump($data);
         $this->session->set_flashdata('loginErr', 'Wrong Username or password.');
         redirect('LogIn');
       } else {

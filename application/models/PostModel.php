@@ -122,10 +122,32 @@ class PostModel extends CI_Model
       return FALSE;
     }
   }
-  
-  public function edit($postid){
+
+  public function getSpecificPost($postid){
     $SQLquery = "SELECT * FROM Posts WHERE PostID = $postid";
     $query = $this->db->query($SQLquery);
     return $query->row_array();
+  }
+  
+  public function edit($postid){
+    $title = $this->input->post('Title');
+    $content = $this->input->post('Content');
+
+    if (!empty($this->input->post("Category"))){
+      $category = $this->input->post("Category");
+    }
+    else {
+      $category = $this->input->post("NewCategory");
+    }
+    $timestamp = date('Y-m-d H:i:s');
+
+    $SQLquery = "UPDATE Posts SET Title = ?, Content = ?, Category = ?, TimeStamp = ? WHERE PostID = ?";
+    $query = $this->db->query($SQLquery, array($title, $content, $category,$timestamp, $postid));
+    if($query){
+      return TRUE;
+    }
+    else{
+      return FALSE;
+    }
   }
 }
