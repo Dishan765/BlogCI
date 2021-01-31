@@ -10,12 +10,12 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdn.ckeditor.com/ckeditor5/24.0.0/classic/ckeditor.js"></script>
   <link rel="stylesheet" href="CSS/bootstrap.css" />
-  <title>Document</title>
+  <title>Story</title>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="<?php echo site_url('index') ?>">Blog</a>
+    <a class="navbar-brand" href="<?php echo site_url('index') ?>">Story</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,7 +32,7 @@
         <li class=" <?php if ($this->uri->uri_string() == 'Category') {
                       echo 'active';
                     } ?> nav-item">
-          <a class="nav-link" href="<?php echo base_url().'Category'; ?>">Categories</a>
+          <a class="nav-link" href="<?php echo base_url().'Category'; ?>">Tags</a>
         </li>
     </div>
 
