@@ -1,21 +1,28 @@
-#Story
+<h1>Story</h1>
+
 A website where users can:
-	-register
-	-login
-	-post stories 
-	-update their story
-	-delete their story
-	-view story by category
-The story website was built using the Codeigniter framework.
+<ul>
+  <li>Register</li>
+  <li>Login</li>
+  <li>Post stories</li>
+  <li>Update their stories</li>
+  <li>Delete their stories</li>
+  <li>View a story by category</li>
+</ul>
+<p>The story website was built using the Codeigniter framework.</p>
 
-#What I Learned
-Learn the  MVC design pattern.
-Learned about routing, authentication and sessions in Codeigniter framework.
+<h1> What I Learned</h1>
+<ul>
+  <li>Learn the  MVC design pattern.</li>
+  <li>Learned about routing, authentication and sessions in Codeigniter framework.</li>
+</ul>
 
 
-#Usage
+<h1>Usage</h1>
 
-##SQL
+<h2>SQL</h2>
+
+<pre>
 CREATE TABLE `Posts` (
   `PostID` int(11) NOT NULL,
   `UserID` int(11) NOT NULL,
@@ -32,13 +39,13 @@ CREATE TABLE `User` (
   `UserName` varchar(30) NOT NULL,
   `Password` varchar(200) NOT NULL,
   `Image` varchar(40) NOT NULL,
-   PRIMARY KEY (`UserID`);
+   PRIMARY KEY (`UserID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
 ALTER TABLE `Posts`
   ADD CONSTRAINT `Posts_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `User` (`UserID`);
-
+</pre>
 
 
 
